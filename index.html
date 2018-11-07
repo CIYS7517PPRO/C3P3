@@ -26,7 +26,7 @@
         document.getElementById("button1").addEventListener("click", () => {
             try {
                 constantValue += 1;
-            } catch () {
+            } catch (error) {
                 console.log("Cannot reassign a constant");
             }
             changingValue += 1;
