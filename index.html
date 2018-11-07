@@ -7,12 +7,20 @@
 <body>
     <p id = "constantValue"></p>
     <p id = "changingValue"></p>
-    <button id = "button1">
+    <button id = "button1">Increment</button>
     <script>
         const constantValue = 0;
         let changingValue = 0;
+
+        document.getElementById("constantValue").innerHTML = constantValue;
+        document.getElementById("changingValue").innerHTML = changingValue;
+        
         document.getElementById("button1").addEventListener("click", () => {
-            constantValue += 1;
+            try {
+                constantValue += 1;
+            } catch () {
+                console.log("Cannot reassign a constant");
+            }
             changingValue += 1;
 
             document.getElementById("constantValue").innerHTML = constantValue;
